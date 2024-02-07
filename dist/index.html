@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>toDo List</title>
-</head>
-<body>
+  </head>
+  <body>
     <header></header>
     <main>
+      <section id="project">
+        <div id="project-list"></div>
         <button id="newProject">Create a new Project</button>
-        <div id="project-list">
-            <div id="today"></div>
-            <div id="this-week"></div>
-            <div id="all"></div>
-        </div>
-        <div id="project-task"></div>
+        <dialog id="dialogProject">
+          <form action="">
+            <label for="projectName">Project name</label>
+            <input type="text" id="projectName" name="projectName" />
+            <button type="button" id="projectCancel">Cancel</button>
+            <button type="button" id="projectConfirm">Confirm</button>
+          </form>
+        </dialog>
+      </section>
+      <section id="task">
+        <div id="task-list"></div>
+        <button id="newTask">Create a new task</button>
+        <dialog id="dialogTask">
+          <form action="">
+            <label for="taskName">Task name</label>
+            <input type="text" id="taskName" name="taskName" />
+            <button type="button" id="taskCancel">Cancel</button>
+            <button type="button" id="taskConfirm">Confirm</button>
+          </form>
+        </dialog>
+      </section>
     </main>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
