@@ -8,6 +8,10 @@ export default class Project {
         return this.title;
     }
 
+    setTitle(title) {
+        this.title = title;
+    }
+
     getTaskList(){
         return this.taskList;
     }

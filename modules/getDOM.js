@@ -10,6 +10,12 @@ const btnTaskCancel = main_DOM.querySelector("#taskCancel");
 const dialogProject = main_DOM.querySelector("#dialogProject");
 const dialogTask = main_DOM.querySelector("#dialogTask");
 const projectName = main_DOM.querySelector("#projectName");
+const dialogEditProject = main_DOM.querySelector("#edit-project");
+const oldName = main_DOM.querySelector("#oldName");
+const newProjectName = main_DOM.querySelector("#newProjectName");
+const btnProjectEditCancel = main_DOM.querySelector("#projectEditCancel");
+const btnProjectEditConfirm = main_DOM.querySelector("#projectEditConfirm");
+
 
 export {
   project_content,
@@ -23,4 +29,9 @@ export {
   dialogProject,
   dialogTask,
   projectName,
+  dialogEditProject,
+  oldName,
+  newProjectName,
+  btnProjectEditCancel,
+  btnProjectEditConfirm,
 };

@@ -1,48 +1,38 @@
-import {
-  btnTaskDialog,
-  btnProjectConfirm,
-  btnProjectCancel,
-  btnTaskConfirm,
-  btnTaskCancel,
-  dialogProject,
-  dialogTask,
-  btnProjectDialog,
-  projectName,
-} from "./getDOM";
+import * as DOM from "./getDOM";
 import createProject from "./createNewProject";
 import { addProjectToDOM } from "./writeToDOM";
 import Project from "./project";
 
 export function setupEventListeners() {
-  btnProjectDialog.addEventListener("click", funcDialogProject);
-  btnProjectConfirm.addEventListener("click", funcProjectConfirm);
-  btnProjectCancel.addEventListener("click", funcProjectCancel);
-  btnTaskDialog.addEventListener("click", funcTaskDialog);
-  btnTaskConfirm.addEventListener("click", funcTaskConfirm);
-  btnTaskCancel.addEventListener("click", funcTaskCancel);
+  DOM.btnProjectDialog.addEventListener("click", funcDialogProject);
+  DOM.btnProjectConfirm.addEventListener("click", funcProjectConfirm);
+  DOM.btnProjectCancel.addEventListener("click", funcProjectCancel);
+  DOM.btnTaskDialog.addEventListener("click", funcTaskDialog);
+  DOM.btnTaskConfirm.addEventListener("click", funcTaskConfirm);
+  DOM.btnTaskCancel.addEventListener("click", funcTaskCancel);
 }
 
 function funcDialogProject() {
-  dialogProject.show();
+  DOM.dialogProject.show();
 }
 
 function funcProjectCancel() {
-  dialogProject.close();
+  DOM.dialogProject.close();
 }
 
 function funcProjectConfirm() {
-  if (projectName.value != "") {
-    const project = new Project(projectName.value);
+  if (DOM.projectName.value != "") {
+    const project = new Project(DOM.projectName.value);
     addProjectToDOM(project);
   }
 }
 
 function funcTaskDialog() {
-  dialogTask.show();
+  DOM.dialogTask.show();
 }
 
 function funcTaskConfirm() {}
 
 function funcTaskCancel() {
-  dialogTask.close();
+  DOM.dialogTask.close();
 }
